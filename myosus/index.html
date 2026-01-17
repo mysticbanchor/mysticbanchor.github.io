@@ -18,23 +18,35 @@
   <meta name="twitter:title" content="みょすの星占い｜無料で今すぐ占ってみる🔮✨">
   <meta name="twitter:description" content="月星座×血液型で自己分析＋ボイドタイム通知🌟iOS & Android 対応">
   <meta name="twitter:image" content="https://mysticbanchor.github.io/myosus/ogp.png" />
+  <meta property="og:url" content="https://mysticbanchor.github.io/myosus" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- リダイレクト -->
   <script>
-    (function () {
-      var ua = navigator.userAgent || "";
+(function () {
+  var path = location.pathname;
 
-      if (/android/i.test(ua)) {
-        location.href = "https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope";
-      } else if (/iPhone|iPad|iPod/i.test(ua)) {
-        location.href = "https://apps.apple.com/jp/app/id6757776396";
-      } else {
-        location.href = "https://mysticbanchor.github.io/myosus/pc.html";
-      }
-    })();
-  </script>
+  // スラッシュ付きで来たらスラッシュなしへ
+  if (path === "/myosus/") {
+    location.replace("https://mysticbanchor.github.io/myosus");
+    return;
+  }
+
+  // 通常のストア振り分け（少し遅らせる）
+  setTimeout(function () {
+    var ua = navigator.userAgent || "";
+
+    if (/android/i.test(ua)) {
+      location.href = "https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope";
+    } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      location.href = "https://apps.apple.com/jp/app/id6757776396";
+    } else {
+      location.href = "https://mysticbanchor.github.io/myosus/pc.html";
+    }
+  }, 1200);
+})();
+</script>
 </head>
 <body>
   <p>ストアへ移動しています…</p>
