@@ -51,6 +51,15 @@
             padding-bottom: 0.2rem;
         }
 
+        h3 {
+            font-size: 1.2rem;
+            color: #4a3d6b;
+            border-left: 4px solid #c5b3d6; /* h2の線の色と同じ */
+            padding-left: 0.8rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
         main {
             max-width: 800px;
             margin: 2rem auto;
@@ -77,15 +86,27 @@
             transform: translateY(-2px);
         }
 
+            .buttons {
+            display: flex;           /* 横並びにする */
+            justify-content: center; /* 中央に寄せる */
+            flex-wrap: wrap;         /* スマホで幅が足りない時は自動で折り返す */
+            gap: 15px;               /* ボタン同士の間隔 */
+            margin: 2rem 0;         /* 前後の余白 */
+            text-align: center;
+        }
+
+        /* 子要素：ボタン自体のデザイン（現状のものを少し調整） */
         .buttons a {
             display: inline-block;
-            margin: 0.5rem 0.5rem 0 0;
+            /* margin: 0.5rem 0.5rem 0 0;  ← gapを使うのでこれは消してもOK */
             padding: 0.8rem 1.5rem;
             border-radius: 10px;
             background: linear-gradient(135deg, #a084ca, #6b4a99);
             color: #fff;
             font-weight: bold;
             transition: all 0.3s ease;
+            text-align: center;
+            min-width: 200px; /* ボタンの幅を揃えるとかっこよくなります */
         }
         .buttons a:hover {
             transform: translateY(-2px);
@@ -104,13 +125,16 @@
             h2 {
                 font-size: 1.2rem;
             }
+            h3 {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Mystic Banchor へようこそ</h1>
-        <p>大事な予定をボイドタイムから守る⏰✨<br>「みょすのボイドタイマー」をリリース🔮✨</p>
+        <p>大事な予定をボイドタイムから守る<br>「みょすのボイドタイマー」をリリース⏰✨</p>
     </header>
 
     <main>
@@ -140,10 +164,10 @@
     </section>
 <p style="text-align: center; font-weight: bold; margin-top: 30px;">
         毎日を、月のリズムでもっと心地よく。</p>
-        <p>　</p>
+<p>　</p>
         <div class="buttons">
-            <a href="https://apps.apple.com/jp/app/id6757776396">App Storeで見る(準備中)</a>
-            <a href="https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope">Google Playで見る</a>
+            <a href="https://apps.apple.com/jp/app/id6757776396">App Storeで入手する(準備中)</a>
+            <a href="https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope">Google Playで入手する</a>
         </div>
 <p>　</p>
         <h2>広告について</h2>
