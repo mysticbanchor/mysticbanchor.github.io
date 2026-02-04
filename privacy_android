@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - Myos's Horoscope (みょすの星占い)</title>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 1.8rem;
+            color: #4a3d6b;
+            border-bottom: 2px solid #a084ca;
+            padding-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            color: #4a3d6b;
+            margin-top: 30px;
+            background: #f0ebf7;
+            padding: 5px 15px;
+            border-left: 5px solid #a084ca;
+        }
+        p, li {
+            font-size: 0.95rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #a084ca;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="/" class="back-link">← ホームへ戻る</a>
+    <h1>プライバシーポリシー</h1>
+    <p>Mystic Banchor（以下，「当社」といいます。）は，当社が提供するスマートフォン用アプリケーション「みょすの星占い / Myos's Horoscope」（以下,「本アプリ」といいます。）および本アプリに関連して提供するサービス（以下，「本サービス」といいます。）における，ユーザーの個人情報および利用者情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。</p>
+
+    <h2>第1条（個人情報、利用者情報、および対象年齢）</h2>
+    <ul>
+        <li><strong>個人情報：</strong>「個人情報保護法」にいう「個人情報」を指すものとし、生存する個人に関する情報であって、氏名、メールアドレス、電話番号、本サービス利用時に生成されるユーザー識別ID（UID）、その他特定の個人を識別できる情報（個人識別情報）を指します。</li>
+        <li><strong>利用者情報：</strong>本サービスに関連して収集する、個人情報保護法上の個人情報に該当しない情報。具体的には、占い結果の計算に必要なデータ（生年月日、出生時刻、出生地、性別、血液型など）、広告識別子、端末情報、アクセスログなどを指します。</li>
+        <li><strong>対象年齢：</strong>本アプリは13歳未満の児童を主な利用者として想定しておらず、13歳未満の児童からの個人情報の収集は意図していません。</li>
+    </ul>
+
+    <h2>第2条（個人情報および利用者情報の収集方法）</h2>
+    <p>当社は、本サービスの提供にあたり、以下の情報をシステムを通じて取得します。</p>
+    <ul>
+        <li><strong>占い利用に必要な情報：</strong>ユーザーが入力した名前（任意）、生年月日、出生地、血液型、性別、出生時刻。</li>
+        <li><strong>自動取得情報：</strong>ユーザー識別ID（UID）、端末情報、IPアドレス、おおよその位置情報、クラッシュ情報。</li>
+        <li><strong>プッシュ通知設定：</strong>通知許可状態の記録。</li>
+        <li><strong>Googleカレンダー連携：</strong>同期の成否ステータス。※カレンダー内の他の予定を読み取り、保存することはありません。</li>
+        <li><strong>お問い合わせ情報：</strong>メールアドレス、不具合報告時の画像等。</li>
+    </ul>
+
+    <h2>第3条（収集・利用する目的）</h2>
+    <p>当社は、以下の目的で情報を利用します。</p>
+    <ol>
+        <li>占い結果の提供・計算のため</li>
+        <li>Googleカレンダー同期およびウィジェット表示の利便性向上のため</li>
+        <li>ユーザーアカウント（UID）の管理のため</li>
+        <li>サービスの不具合診断、品質改善、不正利用防止のため</li>
+        <li>広告の表示（Google AdMob）および効果測定のため</li>
+        <li>お問い合わせ対応のため</li>
+    </ol>
+
+    <h2>第4条〜第7条（開示・提供・訂正・停止）</h2>
+    <p>当社は、個人情報保護法に基づき、ユーザー本人の同意なく第三者に個人情報を提供することはありません。また、ユーザーからの開示、訂正、利用停止の請求には遅滞なく対応いたします。</p>
+
+    <h2>第8条（アカウントおよび関連データの削除）</h2>
+    <p>ユーザーは、本アプリ内の設定画面にあるお問い合わせフォームより連絡することで、アカウントおよび収集されたデータの削除をいつでもリクエストできます。</p>
+    <ul>
+        <li><strong>削除対象：</strong>UID、生年月日、端末情報、IPアドレス、通知設定、Google連携履歴、利用履歴等。</li>
+        <li><strong>対応期間：</strong>リクエスト受領後30日以内に削除を実施します。</li>
+    </ul>
+
+    <h2>第9条・第10条（変更・お問い合わせ）</h2>
+    <p>本ポリシーは、ユーザーに通知することなく変更することがあります。お問い合わせは下記までお願いいたします。</p>
+    <p><strong>Mystic Banchor（ミスティック・バンカー）</strong><br>
+    メール：<a href="mailto:mysticbanchorst@gmail.com">mysticbanchorst@gmail.com</a></p>
+
+    <div class="footer">
+        最終更新日：2026年2月4日<br>
+        &copy; 2026 Mystic Banchor
+    </div>
+</div>
+
+</body>
+</html>
