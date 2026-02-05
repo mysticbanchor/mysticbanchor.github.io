@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="CgPpNxdrqR5o-pr2fYFN6dEkdB6iwnDBFxciZf2nIXw" />
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BYNLG48XGW"></script>
 <script>
@@ -13,11 +12,11 @@
   gtag('config', 'G-BYNLG48XGW');
 </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystic Banchor - ボイドタイム通知アプリ | Void Timer & みょすの星占い</title>
-    <meta name="description" content="月のボイドタイム・新月・満月を通知し、大事な予定を守るアプリ。iOS版「Void Timer」はカウントダウン・Live Activity・ウィジェット対応。Android版「みょすの星占い」は月星座で自己分析も。毎日を、月のリズムでもっと心地よく。">
+    <title>Mystic Banchor | Void Timer & みょすの星占い</title>
+    <meta name="description" content="月のボイドタイム・新月・満月を通知し、カレンダーと連携して予定を守るアプリ。Android版は月星座×血液型で自己分析も。毎日を月のリズムで心地よく。">
     <meta property="og:title" content="Mystic Banchor - 毎日を、月のリズムでもっと心地よく。">
-    <meta property="og:description" content="ボイドタイムをリアルタイム通知＆カレンダー登録。新月・満月もお知らせ。iOSはLive Activity対応のVoid Timer、Androidは月星座で自己分析付き。毎日の予定を月の流れで守ろう✨">
-    <meta property="og:image" content="https://mysticbanchor.github.io/myosus/ogp.png">
+    <meta property="og:description" content="ボイドタイム通知＆Googleカレンダー連携。新月・満月お知らせ。Androidは月星座占いで本音の自分を知ろう。">
+    <meta property="og:image" content="https://mysticbanchor.com/myosus/ogp.png">
     
     <style>
         /* ===== ベース設定 ===== */
@@ -29,7 +28,6 @@
             margin: 0;
             padding: 0;
         }
-
         a {
             color: #5c4d7d;
             text-decoration: none;
@@ -38,20 +36,17 @@
         a:hover {
             text-decoration: underline;
         }
-
         header, footer {
             text-align: center;
             padding: 2rem 1rem;
             background: rgba(255, 255, 255, 0.6); /* 背景を半透明にして柔らかく */
             backdrop-filter: blur(5px);
         }
-
         h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
             color: #4a3d6b;
         }
-
         h2 {
             font-size: 1.5rem;
             margin-top: 2rem;
@@ -60,7 +55,6 @@
             display: inline-block;
             padding-bottom: 0.2rem;
         }
-
         h3 {
             font-size: 1.2rem;
             color: #4a3d6b;
@@ -69,17 +63,14 @@
             margin-top: 1.5rem;
             margin-bottom: 1rem;
         }
-
         main {
             max-width: 800px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
-
         p {
             margin-bottom: 1rem;
         }
-
         ul {
             list-style: none;
             padding: 0;
@@ -95,20 +86,18 @@
         ul li:hover {
             transform: translateY(-2px);
         }
-
-            .buttons {
-            display: flex;           /* 横並びにする */
+        .buttons {
+            display: flex; /* 横並びにする */
             justify-content: center; /* 中央に寄せる */
-            flex-wrap: wrap;         /* スマホで幅が足りない時は自動で折り返す */
-            gap: 15px;               /* ボタン同士の間隔 */
-            margin: 2rem 0;         /* 前後の余白 */
+            flex-wrap: wrap; /* スマホで幅が足りない時は自動で折り返す */
+            gap: 15px; /* ボタン同士の間隔 */
+            margin: 2rem 0; /* 前後の余白 */
             text-align: center;
         }
-
         /* 子要素：ボタン自体のデザイン（現状のものを少し調整） */
         .buttons a {
             display: inline-block;
-            /* margin: 0.5rem 0.5rem 0 0;  ← gapを使うのでこれは消してもOK */
+            /* margin: 0.5rem 0.5rem 0 0; ← gapを使うのでこれは消してもOK */
             padding: 0.8rem 1.5rem;
             border-radius: 10px;
             background: linear-gradient(135deg, #a084ca, #6b4a99);
@@ -122,13 +111,18 @@
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0,0,0,0.15);
         }
-
-        footer p {
+        footer {
             font-size: 0.9rem;
             color: #777;
         }
-        /* X: <a href="https://x.com/mysticbanchorX">@mysticbanchorX</a> |  */
-
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        footer li {
+            margin-bottom: 0.5rem;
+        }
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.5rem;
@@ -144,51 +138,46 @@
 </head>
 <body>
     <header>
-  <h1>Mystic Banchor</h1>
-    <p>Myos's Horoscope & Void Timer</p>
-  <p>毎日を、月のリズムでもっと心地よく。</p>
-</header>
+        <h1>Mystic Banchor</h1>
+        <p>Myos's Horoscope & Void Timer</p>
+        <p>毎日を、月のリズムでもっと心地よく。</p>
+    </header>
+    <main>
 
-<main>
-  <h2>iOS版：Void Timer（準備中）</h2>
-  <p>ボイドタイムのカウントダウン・プログレスバー、新月・満月通知、カレンダー/リマインダー連携、ウィジェット、Live Activity対応。</p>
-  <div class="buttons">
-    <a href="https://apps.apple.com/jp/app/id6757776396">App Store（準備中）</a>
-  </div>
+         <h2>Android版：みょすの星占い (Myos's Horoscope)</h2>
+        <p>月星座×血液型占い＋ボイドタイム通知・Googleカレンダー連携。太陽星座だけではわからない「本音の自分」や、気になる人の性格をチェック！</p>
+        <div class="buttons">
+            <a href="https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope">Google Playで入手</a>
+        </div>
+        
+        <h3>主な機能</h3>
+        <ul>
+            <li>月星座×血液型で自己分析（シェア機能あり）</li>
+            <li>ボイドタイム通知（開始2時間前・開始・終了、現地時間対応、サイレント時間帯あり）</li>
+            <li>新月・満月のお知らせ</li>
+            <li>Googleカレンダー連携（予定自動同期、一括削除可能）</li>
+            <li>ホーム画面ウィジェットでいつでもチェック</li>
+            <li>初心者向け読みやすい解説、キャラクター案内</li>
+        </ul>
 
-  <h2>Android版：みょすの星占い (Myos's Horoscope)</h2>
-  <p>ボイドタイム通知・カレンダー連携に加え、月星座×血液型での自己分析も。</p>
-  <div class="buttons">
-    <a href="https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope">Google Playで入手</a>
-  </div>
+        <h2>iOS版：Void Timer（準備中）</h2>
+        <p>ボイドタイムカウントダウン、新月・満月通知、カレンダー/リマインダー連携、ウィジェット、Live Activity対応。<strong>占い機能はありません</strong>。</p>
+        <div class="buttons">
+            <a href="https://apps.apple.com/jp/app/id6757776396">App Store（準備中）</a>
+        </div>
 
-  <h2>共通の特徴</h2>
-  <ul>
-    <li>現地時間対応で海外でも安心</li>
-    <li>カレンダー連携</li>
-    <li>ウィジェット機能</li>
-    <!-- など -->
-  </ul>
+       
 
-  <h2>広告について</h2>
-  <p><a href="/app-ads.txt">app-ads.txt</a></p>
-</main>
-
-   <footer>
-  <p>© 2026 Mystic Banchor</p>
-  
-  <p>
-    <strong>iOS: Void Timer</strong><br>
-    <a href="https://prairie-week-fe2.notion.site/2f728a776a3c80938877dd4d08a2fe93">Privacy Policy</a>
-  </p>
-
-  <p>
-    <strong>Android: みょすの星占い (Myos's Horoscope)</strong><br>
-    <a href="/privacy_android.html">Privacy Policy</a> | 
-    <a href="/terms_android.html">Terms of Service</a>
-  </p>
-
-  <p>お問い合わせ: <a href="mailto:mysticbanchorst@gmail.com">mysticbanchorst@gmail.com</a></p>
-</footer>
+        <h2>広告について</h2>
+        <p><a href="/app-ads.txt">app-ads.txt</a></p>
+    </main>
+    <footer>
+        <p>© 2026 Mystic Banchor</p>
+        <ul>
+            <li><strong>iOS: Void Timer</strong> - <a href="https://prairie-week-fe2.notion.site/2f728a776a3c80938877dd4d08a2fe93">Privacy Policy</a></li>
+            <li><strong>Android: みょすの星占い</strong> - <a href="/privacy_android.html">Privacy Policy</a> | <a href="/terms_android.html">Terms of Service</a></li>
+            <li>お問い合わせ: <a href="mailto:mysticbanchorst@gmail.com">mysticbanchorst@gmail.com</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
