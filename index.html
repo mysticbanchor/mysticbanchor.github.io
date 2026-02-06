@@ -18,106 +18,110 @@
     <meta property="og:description" content="ボイドタイム通知＆Googleカレンダー連携。新月・満月お知らせ。Androidは月星座占いで本音の自分を知ろう。">
     <meta property="og:image" content="https://mysticbanchor.com/myosus/ogp.png">
     
-   <style>
+<style>
 /* ===== ベース設定 ===== */
 body {
     font-family: 'Noto Sans JP', sans-serif;
     background: #E7F1ED;
     color: #333;
-    line-height: 1.5;
+    line-height: 1.4; /* 少し詰めました */
     margin: 0;
     padding: 0;
 }
-a {
-    color: #5c4d7d;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
+a { color: #5c4d7d; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
 header {
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 0.8rem 1rem; /* 大幅にスリム化 */
     background: rgba(255,255,255,0.6);
     backdrop-filter: blur(5px);
+    border-bottom: 1px solid #c5b3d6;
 }
-h1 {
-    font-size: 2rem;
-    margin-bottom: 0.3rem;
-    color: #4a3d6b;
-}
-h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    color: #4a3d6b;
-    border-bottom: 2px solid #c5b3d6;
-    display: inline-block;
-    padding-bottom: 0.2rem;
-}
-h3 {
-    font-size: 1.2rem;
-    color: #4a3d6b;
-    border-left: 4px solid #c5b3d6;
-    padding-left: 0.6rem;
-    margin: 1rem 0 0.5rem 0;
-}
+h1 { font-size: 1.6rem; margin: 0; color: #4a3d6b; } /* サイズダウン */
+header p { margin: 0; font-size: 0.9rem; opacity: 0.8; }
+
 main {
-    max-width: 900px;
-    margin: 1rem auto;
+    max-width: 1000px; /* 少し横幅を広げました */
+    margin: 0.5rem auto;
     padding: 0 1rem;
 }
-p {
-    margin: 0.5rem 0;
+
+/* 2カラムレイアウトの核 */
+.app-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
+.app-section {
+    flex: 1; /* 左右均等 */
+    background: #ffffff66;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #4a3d6b;
+    border-bottom: 2px solid #c5b3d6;
+    display: block;
+}
+h3 {
+    font-size: 1rem;
+    color: #4a3d6b;
+    margin: 0.8rem 0 0.4rem 0;
+}
+
+.description { font-size: 0.85rem; margin-bottom: 0.5rem; }
+
 .buttons {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 1rem 0 1.5rem 0;
+    justify-content: flex-start;
+    margin: 0.5rem 0;
 }
 .buttons a {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     background: linear-gradient(135deg, #a084ca, #6b4a99);
     color: #fff;
     font-weight: bold;
-    min-width: 180px;
+    font-size: 0.85rem;
     text-align: center;
 }
-.buttons a:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
+
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
+    grid-template-columns: 1fr; /* 横並びの中なので1列に */
+    gap: 0.3rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.8rem;
 }
 .feature-grid li {
     background: #ffffffaa;
-    padding: 0.6rem 0.8rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-    text-align: center;
+    padding: 0.4rem;
+    border-radius: 6px;
+    text-align: left;
+    border: 1px solid #eee;
 }
+
 .important-links {
     background: #ffffffcc;
     border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex; /* 横に並べる */
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
 }
-.important-links a {
-    font-weight: bold;
-}
-@media (max-width: 600px) {
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.2rem; }
-    h3 { font-size: 1.1rem; }
-    .feature-grid { grid-template-columns: 1fr; }
+.important-links p { margin: 0; }
+
+@media (max-width: 800px) {
+    .app-container { flex-direction: column; }
+    .important-links { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
 </style>
 </head>
@@ -125,42 +129,43 @@ p {
 <header>
     <h1>Mystic Banchor</h1>
     <p>Myos's Horoscope & Void Timer</p>
-    <p>毎日を、月のリズムでもっと心地よく。</p>
 </header>
 <main>
-    <!-- Androidアプリ紹介 -->
-    <h2>Android版：みょすの星占い (Myos's Horoscope)</h2>
-    <p>月星座×血液型占い＋ボイドタイム通知・Googleカレンダー連携。太陽星座だけではわからない「本音の自分」や、気になる人の性格をチェック！</p>
-    <div class="buttons">
-        <a href="https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope">Google Playで入手</a>
+    <div class="app-container">
+        <section class="app-section">
+            <h2>Android：みょすの星占い (Myos's Horoscope)</h2>
+            <p class="description">月星座×血液型占い＋ボイドタイム通知。太陽星座だけではわからない「本音」をチェック！</p>
+            <div class="buttons">
+                <a href="https://play.google.com/store/apps/details?id=jp.mysticbanchor.myosus.horoscope">Google Playで入手</a>
+            </div>
+            <h3>主な機能</h3>
+            <ul class="feature-grid">
+                <li>月星座×血液型で自己分析</li>
+                <li>ボイドタイム通知（現地時間対応）</li>
+                <li>Googleカレンダー連携（自動同期可能）</li>
+                <li>ホーム画面ウィジェット対応</li>
+            </ul>
+        </section>
+
+        <section class="app-section">
+            <h2>iOS：Void Timer（準備中）</h2>
+            <p class="description">ボイドカウントダウン、新月通知、Live Activity対応。※占い機能なし</p>
+            <div class="buttons">
+                <a href="https://apps.apple.com/jp/app/id6757776396">App Store（準備中）</a>
+            </div>
+            <h3>主な機能</h3>
+            <ul class="feature-grid">
+                <li>ボイドタイム カウントダウン</li>
+                <li>新月・満月プッシュ通知</li>
+                <li>カレンダー/リマインダー連携</li>
+                <li>Live Activityで経過を表示</li>
+            </ul>
+        </section>
     </div>
 
-    <h3>主な機能</h3>
-    <ul class="feature-grid">
-        <li>月星座×血液型で自己分析（シェア機能あり）</li>
-        <li>ボイドタイム通知（開始2時間前・開始・終了、現地時間対応、サイレント時間帯あり）</li>
-        <li>新月・満月のお知らせ</li>
-        <li>Googleカレンダー連携（予定自動同期、一括削除可能）</li>
-        <li>ホーム画面ウィジェットでいつでもチェック</li>
-        <li>初心者向け読みやすい解説、キャラクター案内</li>
-    </ul>
-
-    <!-- iOSアプリ紹介 -->
-    <h2>iOS版：Void Timer（準備中）</h2>
-    <p>ボイドタイムカウントダウン、新月・満月通知、カレンダー/リマインダー連携、ウィジェット、Live Activity対応。<strong>占い機能はありません</strong>。</p>
-    <div class="buttons">
-        <a href="https://apps.apple.com/jp/app/id6757776396">App Store（準備中）</a>
-    </div>
-
-    <!-- 重要リンク -->
     <div class="important-links">
-        <p><strong>iOS: Void Timer</strong> - <a href="https://prairie-week-fe2.notion.site/2f728a776a3c80938877dd4d08a2fe93">Privacy Policy</a></p>
         <p><strong>Android: みょすの星占い (Myos's Horoscope)</strong> - <a href="/privacy_android.html">Privacy Policy</a> | <a href="/terms_android.html">Terms of Service</a></p>
-        <p>お問い合わせ: <a href="mailto:mysticbanchorst@gmail.com">mysticbanchorst@gmail.com</a></p>
+        <p><strong>iOS: Void Timer</strong> - <a href="https://prairie-week-fe2.notion.site/2f728a776a3c80938877dd4d08a2fe93">Privacy Policy</a> | <a href="https://www.notion.so/2f328a776a3c80c18cc7dc2b8f72bcdd">Terms of Service</a></p>
+        <p><a href="mailto:mysticbanchorst@gmail.com">Contact</a> | <a href="/app-ads.txt">app-ads.txt</a></p>
     </div>
-
-    <!-- 広告 / app-ads.txt -->
-    <p><a href="/app-ads.txt">app-ads.txt</a></p>
 </main>
-</body>
-</html>
