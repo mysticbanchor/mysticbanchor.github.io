@@ -20,14 +20,25 @@
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative; /* 言語リンクの基準 */
         }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
+        /* 右上の言語切り替え */
+        .lang-nav {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 0.85rem;
+            color: #ddd;
+        }
+        .lang-nav a {
             text-decoration: none;
             color: #6b4a99;
-            font-weight: bold;
-            font-size: 0.9rem;
+            margin: 0 3px;
+            padding: 2px 4px;
+            transition: 0.3s;
+        }
+        .lang-nav a:hover {
+            text-decoration: underline;
         }
         h1 {
             font-size: 1.8rem;
@@ -73,19 +84,37 @@
             border-top: 1px solid #eee;
             padding-top: 20px;
         }
+        .back-link-container {
+            text-align: left; /* 左寄せに変更 */
+            margin-top: 40px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: #6b4a99;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             .container { margin: 10px; padding: 20px; }
             h1 { font-size: 1.5rem; }
+            .lang-nav { top: 15px; right: 20px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <a href="/" class="back-link">← Mystic Banchor ホームへ戻る</a>
+    <nav class="lang-nav">
+        <a href="#jp">日本語</a> | <a href="#en">English</a>
+    </nav>
+
+    <div id="jp">
     <h1>プライバシーポリシー</h1>
     
-    <p>Mystic Banchor（以下，「当社」といいます。）は，当社が提供するスマートフォン用アプリケーション「みょすの星占い（Myos's Horoscope）」（以下,「本アプリ」といいます。）および本アプリに関連して提供するサービス（以下，「本サービス」といいます。）における，ユーザーの個人情報および利用者情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。</p>
+    <p>Mystic Banchor（以下，「当社」といいます。）は，当社が提供するスマートフォン用アプリケーション「みょすの星占い」（以下,「本アプリ」といいます。）および本アプリに関連して提供するサービス（以下，「本サービス」といいます。）における，ユーザーの個人情報および利用者情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。</p>
 
     <h2>第1条（個人情報、利用者情報、および対象年齢）</h2>
     <ul>
@@ -200,15 +229,12 @@
         最終更新日：2026年2月10日<br>
         &copy; 2026 Mystic Banchor
     </div>
-
+</div>
+    
+<div id="en">
     <hr style="margin: 50px 0; border: 0; border-top: 1px dashed #ccc;">
 
     <h1>Privacy Policy (English Version)</h1>
-    
-    <p style="background-color: #f0f7ff; padding: 15px; border-left: 5px solid #007bff; font-style: italic;">
-        <strong>Note for Google OAuth Verification Team:</strong><br>
-        This section describes our compliance with Google API Services User Data Policy. For the full Japanese version, please refer to the top of this page.
-    </p>
     
    <p>Mystic Banchor ("we," "us," or "our") provides this Privacy Policy to explain how we collect, use, and protect user information in our mobile application "Myos's Horoscope" and related services.</p>
 
@@ -241,11 +267,15 @@
 <p>If you have any questions about this Privacy Policy or our use of Google User Data, please contact us at:</p>
     <strong>Email:</strong> <a href="mailto:mysticbanchorst@gmail.com">mysticbanchorst@gmail.com</a>
 
-    <div class="footer">
-        Last Updated: February 10, 2026<br>
-        &copy; 2026 Mystic Banchor
+     <div class="footer">
+            Last Updated: February 10, 2026<br>
+            &copy; 2026 Mystic Banchor
+        </div>
     </div>
-    
+
+    <div class="back-link-container">
+        <a href="/" class="back-link">← Mystic Banchor ホームへ戻る</a>
+    </div>
 </div>
 
 </body>
