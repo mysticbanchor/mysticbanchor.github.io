@@ -17,17 +17,16 @@
             max-width: 800px;
             margin: 40px auto;
             background: #fff;
-            padding: 40px;
+            padding: 20px 40px 40px 40px;
             border-radius: 12px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: relative; /* 言語リンクの基準 */
         }
-        /* 右上の言語切り替え */
+        /* 右上のスタイルをやめて、中央（または右寄せ）の通常配置に変更 */
         .lang-nav {
-            position: absolute;
-            top: 20px;
-            right: 40px;
+            text-align: right; /* 右寄せにする */
             font-size: 0.85rem;
+            margin-bottom: 10px; /* 線との間の余白 */
             color: #ddd;
         }
         .lang-nav a {
@@ -39,6 +38,12 @@
         }
         .lang-nav a:hover {
             text-decoration: underline;
+        }
+        /* 線のスタイル */
+        .nav-divider {
+            margin: 0 0 30px 0; /* 下に30pxの余白 */
+            border: 0;
+            border-top: 1px dashed #ccc;
         }
         h1 {
             font-size: 1.8rem;
@@ -113,7 +118,7 @@
     </nav>
 
     
-<hr style="margin-top: 10px 0; border: 0; border-top: 1px dashed #ccc;">
+<hr class="nav-divider">
 <div id="jp">
 <hr style="margin: 40px 0; border: 0;">
     <h1>プライバシーポリシー</h1>
